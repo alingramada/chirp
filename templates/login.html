@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<div  align="center" class="form-group">
+<form method="post" class="register-form">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    <p>
+        <label for="id_username" >Username:</label>
+        <input type="text" name="username"  placeholder="Insert Username" autofocus maxlength="254" required id="id_username"/>
+        {{ form.username.errors }}
+    </p>
+    <p>
+        <label for="id_password">Password:</label>
+        <input type="password" name="password" placeholder="Insert password" required id="id_password"/>
+        {{ form.password.errors }}
+    </p>
+    <button type="submit"  class="btn btn-primary">Login</button>
+</form>
+</div>
+{% endblock %}
