@@ -3,6 +3,15 @@ h2 {
 }
 .register-form {
     margin-top: 200px;
+     padding: 100px;
+  max-width: 400px;
+  width: 100% !important;
+
+  margin: 100px auto;
+
+
+  overflow: hidden;
+  font-family: arial;
 }
 
 .chirp {
@@ -12,7 +21,19 @@ h2 {
 .username {
     font-size: 16px;
 }
+.form-login{
+font-family: arial;
+  margin-top: 200px;
+     padding: 100px;
+  max-width: 400px;
+  width: 100% !important;
 
+  margin: 150px auto;
+
+
+  overflow: hidden;
+
+ }
 .row-container {
 margin-top:100px;
 }

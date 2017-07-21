@@ -1,17 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
-<div  align="center" class="form-group">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div  align="center" class="form-group" >
 <form method="post" class="register-form">
     {% csrf_token %}
     {{ form.non_field_errors }}
-    <p>
-        <label for="id_username" >Username:</label>
-        <input type="text" name="username"  placeholder="Insert Username" autofocus maxlength="254" required id="id_username"/>
+    <p> <span class="glyphicon glyphicon-user"></span>
+
+        <input type="text" name="username"  placeholder="Username" autofocus maxlength="254" required id="id_username"/>
         {{ form.username.errors }}
     </p>
     <p>
-        <label for="id_password">Password:</label>
-        <input type="password" name="password" placeholder="Insert password" required id="id_password"/>
+         <span class="glyphicon glyphicon-lock"></span>
+        <input type="password" name="password" placeholder="Password" required id="id_password"/>
         {{ form.password.errors }}
     </p>
     <button type="submit"  class="btn btn-primary">Login</button>
