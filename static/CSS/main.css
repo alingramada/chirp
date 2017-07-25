@@ -1,44 +1,52 @@
 h2 {
     color: red;
 }
-.register-form {
-    margin-top: 200px;
-     padding: 100px;
+
+.container[role=main] {
+    margin-top: 75px;
+}
+.register-form{
+margin-top: 100px;
+     padding: 80px;
   max-width: 400px;
   width: 100% !important;
 
-  margin: 100px auto;
+  margin: 80px auto;
 
 
   overflow: hidden;
   font-family: arial;
 }
-
 .chirp {
-    .margin: 10px 0;
+    .margin: 15px 0;
 }
 
 .username {
     font-size: 16px;
 }
-.form-login{
-font-family: arial;
-  margin-top: 200px;
-     padding: 100px;
-  max-width: 400px;
-  width: 100% !important;
 
-  margin: 150px auto;
-
-
-  overflow: hidden;
-
- }
-.row-container {
-margin-top:100px;
-}
-.pull-right{
-margin-top:10px;}
 .error-field {
     border-color: red;
+}
+
+body {
+  background-image: url('http://media.istockphoto.com/photos/defocused-green-blurred-abstract-background-picture-id508374604?k=6&m=508374604&s=612x612&w=0&h=3e9dw8oyEU7DMqe1MeAliuAsy6Kg9ei6tVhHJAuaKsw=') ;
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-position: 0 50px;
+    background-attachment: fixed;
+}
+.profile-icon {
+    padding: 20px;
+    border: 1px solid #383838;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.follow{
+padding-left:10px;
+padding-right:20px;
+margin:20px;
 }
