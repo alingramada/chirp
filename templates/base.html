@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="shortcut icon" href="https://s-media-cache-ak0.pinimg.com/736x/33/b8/69/33b869f90619e81763dbf1fccc896d8d--lion-logo-modern-logo.jpg">
-    <link rel="apple-touch-icon" href="https://s-media-cache-ak0.pinimg.com/736x/33/b8/69/33b869f90619e81763dbf1fccc896d8d--lion-logo-modern-logo.jpg">
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMlpWYSmT9JebDNz4S04vD9YpfoWKbc_UHVdjNnEz6RkVA6ov5">
+    <link rel="apple-touch-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMlpWYSmT9JebDNz4S04vD9YpfoWKbc_UHVdjNnEz6RkVA6ov5">
 
     <title>Chirp</title>
     <!-- Latest compiled and minified CSS -->
@@ -32,13 +32,14 @@
         <div class="navbar-header">
              <a class="navbar-brand" rel="home" href="#" title="Chirp">
         <img style="max-width:50px; margin-top: -7px;"
-             src="https://s-media-cache-ak0.pinimg.com/736x/33/b8/69/33b869f90619e81763dbf1fccc896d8d--lion-logo-modern-logo.jpg">
+             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMlpWYSmT9JebDNz4S04vD9YpfoWKbc_UHVdjNnEz6RkVA6ov5">
     </a>
             <a class="navbar-brand" href="#">Chirp</a>
         </div>
          <div class="collapse navbar-collapse">
             <div class="nav navbar-nav navbar-right marnav">
-                {%  if user.is_authenticated %}
+                {% if  request.user.is_authenticated %}
+                {{ request.user }}
                     <li class="dropdown marnav" type="none">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <span class="glyphicon glyphicon-user"></span>
@@ -48,7 +49,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="{% url 'my-profile' %}">My Profile</a></li>
                             <li><a href="#">Settings</a></li>
-                            <li><a href="https://www.youtube.com/watch?v=eY52Zsg-KVI&t=14s">Help</a></li>
+                            <li><a href="">Help</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="{% url 'logout' %}">Logout</a></li>
                         </ul>

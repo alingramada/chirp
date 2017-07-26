@@ -5,10 +5,14 @@
         <span class="glyphicon glyphicon-user profile-icon" aria-hidden="true"></span><br>
         <span>{{ object.first_name }} {{ object.last_name }}</span><br>
         <span>@{{ object.username }}</span><br>
-        <span>{{ object.email }}</span>
-          {% if request.user != object %}
+        <span>{{ object.email }}</span><br>
+        {% if request.user != object %}
             {% if object in following %}
-                <button type="submit" class="btn btn-primary follow">Unfollow</button>
+                <form method="post" action="{% url 'unfollow_user' object.username %}">
+                    {% csrf_token %}
+                <button type="submit" class="btn btn-primary unfollow">Unfollow</button>
+
+                </form>
             {% else %}
                 <form method="post" action="{% url 'follow_user' object.username %}">
                     {% csrf_token %}

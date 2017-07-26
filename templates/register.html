@@ -4,33 +4,33 @@
     {% csrf_token %}
     <p>
         <span class="glyphicon glyphicon-pencil"></span>
-        <input type="text" name="first_name" maxlength="30" id="id_first_name" class="{% if form.first_name.errors %} error-field {% endif %}"/>
+        <input type="text" name="first_name" placeholder="First name" maxlength="30" id="id_first_name" class="{% if form.first_name.errors %} error-field {% endif %}"/>
         {{ form.first_name.errors }}
     </p>
     <p>
         <span class="glyphicon glyphicon-pencil"></span>
-        <input type="text" name="last_name" maxlength="30" id="id_last_name" class="{% if form.last_name.errors %} error-field {% endif %}"/>
+        <input type="text" name="last_name" placeholder="Last name" maxlength="30" id="id_last_name" class="{% if form.last_name.errors %} error-field {% endif %}"/>
         {{ form.last_name.errors }}
     </p>
     <p>
          <span class="glyphicon glyphicon-user"></span>
-        <input type="text" name="username" maxlength="150" required id="id_username"
+        <input type="text" name="username" placeholder="Username" maxlength="150" required id="id_username"
         class="{% if form.username.errors %} error-field {% endif %}"/>
         {{ form.username.errors }}
     </p>
     <p>
         <span class="glyphicon glyphicon-envelope"></span>
-        <input type="email" name="email" maxlength="254" id="id_email" class="{% if form.email.errors %} error-field {% endif %}"/>
+        <input type="email" name="email" placeholder="Email" maxlength="254" id="id_email" class="{% if form.email.errors %} error-field {% endif %}"/>
         {{ form.email.errors }}
     </p>
     <p>
         <span class="glyphicon glyphicon-lock"></span>
-        <input type="password" name="password" maxlength="128" required id="id_password" class="{% if form.password.errors %} error-field {% endif %}"/>
+        <input type="password" name="password" placeholder="Password" maxlength="128" required id="id_password" class="{% if form.password.errors %} error-field {% endif %}"/>
         {{ form.password.errors }}
     </p>
     <p>
         <span class="glyphicon glyphicon-lock"></span>
-        <input type="password" name="retype_password" required id="id_retype_password" class="{% if form.retype_password.errors %} error-field {% endif %}"/>
+        <input type="password" name="retype_password" placeholder="Retype password" required id="id_retype_password" class="{% if form.retype_password.errors %} error-field {% endif %}"/>
         {{ form.retype_password.errors }}
     </p>
     <button type="submit" class="btn btn-primary">Register</button>

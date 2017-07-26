@@ -30,7 +30,8 @@ margin-top: 100px;
 }
 
 body {
-  background-image: url('http://media.istockphoto.com/photos/defocused-green-blurred-abstract-background-picture-id508374604?k=6&m=508374604&s=612x612&w=0&h=3e9dw8oyEU7DMqe1MeAliuAsy6Kg9ei6tVhHJAuaKsw=') ;
+  background-image: url('') ;
+  background color:066cb4;
   background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -38,6 +39,7 @@ body {
     background-attachment: fixed;
 }
 .profile-icon {
+    background-color:white;
     padding: 20px;
     border: 1px solid #383838;
     border-radius: 4px;
@@ -49,4 +51,9 @@ body {
 padding-left:10px;
 padding-right:20px;
 margin:20px;
+}
+.lr{
+position:absolute;
+right:20px;
+top:10px;
 }
