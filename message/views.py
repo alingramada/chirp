@@ -79,3 +79,9 @@ def new_chirp(request):
         if form.is_valid():
             form.save()
     return redirect("index")
+
+
+def like_message(request):
+    if request.method =="POST":
+
+        print ("Im here")
