@@ -3,8 +3,9 @@ from django.contrib import admin
 from django.contrib.auth.decorators import login_required
 from django.views.generic.base import TemplateView
 from django.contrib.auth import views as auth_views
-from message.views import RegisterView, TimelineView, MyProfileView, ProfileView, follow_user, new_chirp, unfollow_user, \
-    like_message
+from message.views import RegisterView, TimelineView, MyProfileView, ProfileView, follow_user, unfollow_user, new_chirp, like_message
+
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
