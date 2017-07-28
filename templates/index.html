@@ -5,8 +5,8 @@
      <form method="post" action="{% url 'chirp'  %}">
                     {% csrf_token %}
          <input type="hidden" name="user" value="{{request.user.id}}"/>
-         <label for="id_status">Status:</label>
-          <input type="text" name="status"  maxlength="150" required id="id_status"
+
+          <input type="text" name="status" placeholder="Status"  maxlength="150" required id="id_status"
         class="{% if form.status.errors %} error-field {% endif %}"/>
                     <button type="submit" class="btn btn-primary follow">Chirps</button>
                 </form>

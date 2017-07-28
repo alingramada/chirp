@@ -7,7 +7,7 @@
         <span>@{{ object.username }}</span><br>
         <span>{{ object.email }}</span><br>
         {% if request.user != object %}
-            {% if object in following %}
+            {% if object in following1 %}
                 <form method="post" action="{% url 'unfollow_user' object.username %}">
                     {% csrf_token %}
                 <button type="submit" class="btn btn-primary unfollow">Unfollow</button>
@@ -50,7 +50,29 @@
 
     </div>
     <div class="tab-pane" id="following-tab" >
-           </div>
+        {% for user in following1 %}
+                <div class="row chirp">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <p> You are following  <a href="{% url 'profile' user.username %}">{{ user }}</a>.</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="tab-pane" id="followers-tab">
+
+                 {% for user in followers1 %}
+                 <div class="row chirp">
+                     <div class="panel panel-default">
+                         <div class="panel-body"><p> You are followed by <a href="{% url 'profile' user.username %}">{{ user }}</a>.</p>
+                         </div>
+                     </div>
+                 </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
         </div>
 </div>
 {% endblock %}
